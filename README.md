@@ -2,14 +2,14 @@
 
 https://search-devs.herokuapp.com
 
-## ROUTES DOC
+## ROUTES DOCUMENTATION
 ```
-get: / ----> Route to test AP DevI
+GET: / ----> Route to test AP DevI
 
-get: /devs ----> Get All devs withou filters
+GET: /devs ----> Get All devs withou filters
     RETURNS: [DEVSCHEMA]
 
-get: /search ----> Filter Devs by TECHS and LOCATION
+GET: /search ----> Filter Devs by TECHS and LOCATION
     PARAMS:  {
         "techs": [String],
         "long": Number,
@@ -17,7 +17,7 @@ get: /search ----> Filter Devs by TECHS and LOCATION
     } 
     RETURNS: [DEVSCHEMA]
 
-post: /devs ----> Register a dev
+POST: /devs ----> Register a dev
     PARAMS:  {
         "github_username": String!,
         "techs": [String],
@@ -26,11 +26,10 @@ post: /devs ----> Register a dev
     }
     RETURNS: DEVSCHEMA
 
+DELETE: /devs/:id/delete ---->  Delete a dev, pass the id in the uri
 
-post: /techs ----> Register a Technology
-    PARAMS:  {
-        "tech_name": String!
-    }
+
+GET: /devs ----> Get All devs withou filters
     RETURNS: [TECHSCHEMA]
 ```
 
