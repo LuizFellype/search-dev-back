@@ -24,6 +24,14 @@ post: /devs ----> Register a dev
         "long": Number!,
         "lat": Number!
     }
+    RETURNS: DEVSCHEMA
+
+
+post: /techs ----> Register a Technology
+    PARAMS:  {
+        "tech_name": String!
+    }
+    RETURNS: [TECHSCHEMA]
 ```
 
 ### DEVSCHEMA
@@ -42,5 +50,13 @@ post: /devs ----> Register a dev
         "type": "Point"
     },
     "__v": Number
+}
+```
+
+### TECHSCHEMA
+```
+{
+    "_id": ID!,
+    "name": String!
 }
 ```
