@@ -76,4 +76,12 @@ module.exports = {
 
     },
 
+    delete: async (req, res) => {
+        const idToDelete = req.params.id
+
+        await DevModel.deleteOne({_id: idToDelete})
+
+        return res.json({ deleted: idToDelete })
+    }
+
 }

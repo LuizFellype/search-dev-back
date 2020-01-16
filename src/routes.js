@@ -12,6 +12,7 @@ routes.get('/devs', DevController.getAllDevs)
 routes.get('/search', DevController.searchByLocation)
 
 routes.post('/devs', DevController.registerDev)
+routes.delete('/devs/:id/delete',  DevController.delete)
 
 // TECH
 routes.get('/techs',  TechController.getAll)
