@@ -18,6 +18,11 @@ const DevSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    user_profile: {
+        type: String,
+        required: true,
+        unique: true
+    },
     name: String,
     bio: String,
     techs: [String],
