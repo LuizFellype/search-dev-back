@@ -1,3 +1,14 @@
+## HOW TO RUN THE PROJECT
+
+```
+yarn install
+
+yarn dev
+```
+
+- See the PORT running on the console and go there.
+
+
 ## API URL
 
 https://search-devs.herokuapp.com
