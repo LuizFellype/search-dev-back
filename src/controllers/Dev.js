@@ -13,7 +13,7 @@ module.exports = {
     },
 
     searchByLocation: async (req, res) => {
-        const { long, lat, techs } = req.body
+        const { long, lat, techs } = req.query
 
         const devs = await DevModel.find({
             techs: {
@@ -23,13 +23,12 @@ module.exports = {
                 $near: {
                     $geometry: {
                         type: 'Point',
-                        coordinates: [long, lat]
+                        coordinates: [parseFloat(long), parseFloat(lat)]
                     },
                     $maxDistance: 10000
                 }
             }
         })
-
         return res.json(devs)
     },
 

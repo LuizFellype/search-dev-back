@@ -10,7 +10,7 @@ GET: /devs ----> Get All devs withou filters
     RETURNS: [DEVSCHEMA]
 
 GET: /search ----> Filter Devs by TECHS and LOCATION
-    PARAMS:  {
+    PARAMS (params):  {
         "techs": [String],
         "long": Number,
         "lat": Number
@@ -18,7 +18,7 @@ GET: /search ----> Filter Devs by TECHS and LOCATION
     RETURNS: [DEVSCHEMA]
 
 POST: /devs ----> Register a dev
-    PARAMS:  {
+    PARAMS (body):  {
         "github_username": String!,
         "techs": [String],
         "long": Number!,
